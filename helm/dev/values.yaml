@@ -1,8 +1,8 @@
 replicas: 1
-configmaps:
-- nameOverride: media-service-env
-  enabled: true
-  filename: .env
+ingress:
+  host: cdn.dev.sellgar.ru
+  tlsSecretName: sellgar-dev-tls
+environmentFile:
   data: |
     PORT=8080
     ORIGINS=https://dev.sellgar.ru;https://admin.dev.sellgar.ru
@@ -17,6 +17,3 @@ configmaps:
     MINIO_ENDPOINT=seaweedfs-all-in-one
     MINIO_PORT=8333
     MINIO_BUCKET=sellgar
-ingress:
-  host: cdn.dev.sellgar.ru
-  tlsSecretName: sellgar-dev-tls
