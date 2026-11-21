@@ -3,7 +3,7 @@ const { test } = require('node:test');
 
 const { of } = require('rxjs');
 
-const { MinioStorageRepository } = require('../dist/storage/minio-storage.repository');
+const { MinioStorageRepository } = require('../src/storage/minio-storage.repository');
 
 const configuration = {
   MINIO_BUCKET: 'media',

@@ -13,7 +13,7 @@
     "start:dev": "yarn prebuild && nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "test": "node --test test/*.test.cjs"
+    "test": "node -r ts-node/register --test test/*.test.cjs"
   },
   "dependencies": {
     "@nestjs/common": "12.2.0",

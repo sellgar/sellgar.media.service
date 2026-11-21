@@ -2,7 +2,7 @@ const assert = require('node:assert/strict');
 const { Readable } = require('node:stream');
 const { test } = require('node:test');
 
-const { ImagesService } = require('../dist/api/images/images.service');
+const { ImagesService } = require('../src/api/images/images.service');
 
 test('returns the ready file and its object stream', async () => {
   const file = { uuid: 'file-id', status: 'ready', storageKey: 'objects/image.jpg' };
